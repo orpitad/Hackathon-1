@@ -58,13 +58,13 @@ function generateHTML(nationalityInfo) {
   let html_div = "";
   if (nationalityInfo.country.length > 0) {
     nationality_name = nationalityInfo.name;
-    nationalityInfo.country.sort((a, b) =>
-      a.country_id < b.country_id ? 1 : b.country_id < a.country_id ? -1 : 0
-    );
+//     nationalityInfo.country.sort((a, b) =>
+//       a.country_id < b.country_id ? 1 : b.country_id < a.country_id ? -1 : 0
+//     );
     console.log(nationalityInfo);
 
     for (let i = 0; i <= 1; i++) {
-      if (nationalityInfo.country[i] && nationalityInfo.country[i].country_id) {
+      if (nationalityInfo.country[i]) {
         nationality_country = nationalityInfo.country[i].country_id;
         nationality_probability = nationalityInfo.country[i].probability;
         html_div = `<div class="box red">
